@@ -1,0 +1,24 @@
+# permissions for end users to edit deplus.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: deplus-editor-role
+rules:
+- apiGroups:
+  - deplus.github.com/longhao54/Deplus
+  resources:
+  - deplus
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - deplus.github.com/longhao54/Deplus
+  resources:
+  - deplus/status
+  verbs:
+  - get

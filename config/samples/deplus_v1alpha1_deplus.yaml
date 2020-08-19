@@ -1,0 +1,7 @@
+apiVersion: deplus.github.com/longhao54/Deplus/v1alpha1
+kind: Deplus
+metadata:
+  name: deplus-sample
+spec:
+  # Add fields here
+  foo: bar

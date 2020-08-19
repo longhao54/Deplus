@@ -1,0 +1,20 @@
+# permissions for end users to view deplus.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: deplus-viewer-role
+rules:
+- apiGroups:
+  - deplus.github.com/longhao54/Deplus
+  resources:
+  - deplus
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - deplus.github.com/longhao54/Deplus
+  resources:
+  - deplus/status
+  verbs:
+  - get
